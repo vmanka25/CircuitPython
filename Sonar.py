@@ -7,7 +7,7 @@ import adafruit_hcsr04
 import neopixel
 
 dot = neopixel.NeoPixel(board.NEOPIXEL, 1)
-dot.brightness = 0.5 
+dot.brightness = 0.01 
 sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.D5, echo_pin=board.D6)
 
 while True:
@@ -15,12 +15,16 @@ while True:
     try:
         print((sonar.distance,))
         cm = sonar.distance
-        if cm < 5:
+        if cm<5:
             dot.fill((255, 0, 0)) 
             print("woohoo!")
+        elif 20>cm and cm>5:
+            dot.fill((0, 0, 255)) 
+            print("yipee!")
         else:
-            print("noooooo")
-            dot.fill((0, 0, 0)) 
+            dot.fill((0, 255,0 )) 
+            print("epic!!")
+    
 
         
         # dot.fill((255, 0, 0)) 
