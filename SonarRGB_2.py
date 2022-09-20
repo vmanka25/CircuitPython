@@ -1,4 +1,3 @@
-![epic](https://user-images.githubusercontent.com/71350243/191336684-3c9188f8-f756-47a1-8448-849bf4bedfa7.gif)
 # Vincent
 # 9/16/22
 # sonar sensor that changes the color of a light
