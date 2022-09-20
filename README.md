@@ -26,3 +26,6 @@ git config --global user.name YOURUSERNAME
 git config --global user.email YOURSCHOOLEMAIL
 ```
 3. Return to step 3 of the previous section.
+
+
+![epic](https://user-images.githubusercontent.com/71350243/191336684-3c9188f8-f756-47a1-8448-849bf4bedfa7.gif)
