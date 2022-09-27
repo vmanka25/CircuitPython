@@ -77,7 +77,7 @@ Pictures / Gifs of your work should go here.  You need to communicate what your 
 ## Sonar rgb
 
 ### Description & Code
-I made a neopixel rgb change colors as the ultrasonic sensor senses different distances
+I made a neopixel change colors as the ultrasonic sensor senses different distances
 ```python
 # Vincent
 # 9/16/22
