@@ -35,14 +35,11 @@ What went wrong / was challenging, how'd you figure it out, and what did you lea
 ## CircuitPython_Servo
 
 ### Description & Code
-I made a servo turn using circuit python and an adafruit
+I made two buttons control a servo using circuit python
 ```python
 # Vincent
 # 9/29/22
 # 2 buttons that control the rotation of a servo
-# SPDX-FileCopyrightText: 2018 Kattni Rembor for Adafruit Industries
-#
-# SPDX-License-Identifier: MIT
 
 """CircuitPython Essentials Servo standard servo example"""
 from digitalio import DigitalInOut, Direction, Pull
