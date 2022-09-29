@@ -37,30 +37,41 @@ What went wrong / was challenging, how'd you figure it out, and what did you lea
 ### Description & Code
 I made a servo turn using circuit python and an adafruit
 ```python
-#Vincent Manka
-#9/13/22
-#make a servo rotate
+# Vincent
+# 9/29/22
+# 2 buttons that control the rotation of a servo
+# SPDX-FileCopyrightText: 2018 Kattni Rembor for Adafruit Industries
+#
+# SPDX-License-Identifier: MIT
+
 """CircuitPython Essentials Servo standard servo example"""
+from digitalio import DigitalInOut, Direction, Pull
 import time
+import neopixel
 import board
 import pwmio
 from adafruit_motor import servo
-#imports servo library
-
-
+btn = DigitalInOut(board.D3)
+btn2 = DigitalInOut(board.D2)
+btn.direction = Direction.INPUT
+btn.pull = Pull.UP
+btn2.direction = Direction.INPUT
+btn2.pull = Pull.UP
+# create a PWMOut object on Pin A2.
 pwm = pwmio.PWMOut(board.D3, duty_cycle=2 ** 15, frequency=50)
-#sets pin number and frequency at which it spins
-
-
+# Create a servo object, my_servo.
 my_servo = servo.Servo(pwm)
 
 while True:
-    for angle in range(0, 180, 5):
-        my_servo.angle = angle
-        time.sleep(0.05)
-    for angle in range(180, 0, -5): 
-        time.sleep(0.05)
-        #makes the servo rotate 90 degrees back and forth
+    time.sleep(.1)
+    if btn == True:
+        for angle in range(0, 180, 90):  # 0 - 180 degrees, 100 degrees at a time.
+            my_servo.angle = angle
+    elif btn2 == True:
+        for angle in range(180, 0, -90): # 180 - 0 degrees, 100 degrees at a time.
+            my_servo.angle = angle
+    else:
+        print("click a button man")
 ```
 
 ### Evidence
