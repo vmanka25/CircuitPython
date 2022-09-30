@@ -23,12 +23,10 @@ while True:
 
 
 ### Evidence
-
-### Wiring
+gif of serial monitor saying hello world
 
 ### Reflection
-What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience?  Your ultimate goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person.
-
+something aboadding files from the lib folder into the adafruit was challenging
 
 
 
