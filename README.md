@@ -11,14 +11,90 @@ This repository will actually serve as a aid to help you get started with your o
 ## Hello_CircuitPython
 
 ### Description & Code
-I made the serial monitor say "Hello World" using circuit python
+I made the neopixel on the adafruit have epic gamer rgb
 
 ```python
-from time import sleep
+#Vincent
+#9/13/22
+#rgb light transition
+import time
+import board
+import neopixel
+
+
+# On CircuitPlayground Express, and boards with built in status NeoPixel -> board.NEOPIXEL
+# Otherwise choose an open pin connected to the Data In of the NeoPixel strip, i.e. board.D1
+pixel_pin = board.NEOPIXEL
+
+# On a Raspberry pi, use this instead, not all pins are supported
+# pixel_pin = board.D18
+
+# The number of NeoPixels
+num_pixels = 10
+
+# The order of the pixel colors - RGB or GRB. Some NeoPixels have red and green reversed!
+# For RGBW NeoPixels, simply change the ORDER to RGBW or GRBW.
+ORDER = neopixel.RGB
+
+pixels = neopixel.NeoPixel(
+    pixel_pin, num_pixels, brightness=0.2, auto_write=False, pixel_order=ORDER
+)
+
+
+def wheel(pos):
+    # Input a value 0 to 255 to get a color value.
+    # The colours are a transition r - g - b - back to r.
+    if pos < 0 or pos > 255:
+        r = g = b = 0
+    elif pos < 85:
+        r = int(pos * 3)
+        g = int(255 - pos * 3)
+        b = 0
+    elif pos < 170:
+        pos -= 85
+        r = int(255 - pos * 3)
+        g = 0
+        b = int(pos * 3)
+    else:
+        pos -= 170
+        r = 0
+        g = int(pos * 3)
+        b = int(255 - pos * 3)
+    return (r, g, b) if ORDER in (neopixel.RGB, neopixel.GRB) else (r, g, b, 0)
+
+
+def rainbow_cycle(wait):
+    for j in range(255):
+        for i in range(num_pixels):
+            pixel_index = (i * 256 // num_pixels) + j
+            pixels[i] = wheel(pixel_index & 255)
+        pixels.show()
+        time.sleep(wait)
+
 
 while True:
-    print("Hello world!")
-    sleep(2 )
+    # Comment this line out if you have RGBW/GRBW NeoPixels
+   # pixels.fill((255, 0, 0))
+    # Uncomment this line if you have RGBW/GRBW NeoPixels
+    # pixels.fill((255, 0, 0, 0))
+    #pixels.show()
+    #time.sleep(1)
+
+    # Comment this line out if you have RGBW/GRBW NeoPixels
+    #pixels.fill((0, 255, 0))
+    # Uncomment this line if you have RGBW/GRBW NeoPixels
+    # pixels.fill((0, 255, 0, 0))
+  #  pixels.show()
+  #  time.sleep(1)
+
+    # Comment this line out if you have RGBW/GRBW NeoPixels
+   # pixels.fill((0, 0, 255))
+    # Uncomment this line if you have RGBW/GRBW NeoPixels
+    # pixels.fill((0, 0, 255, 0))
+    #pixels.show()
+    #time.sleep(1)
+
+    rainbow_cycle(0.001)  # rainbow cycle with 1ms delay per step
 ```
 
 
@@ -26,7 +102,7 @@ while True:
 ![helloworld](https://github.com/vmanka25/CircuitPython/blob/master/documentation/HelloWorld.png?raw=true)
 
 ### Reflection
-this project was pretty easy. ctrl + to open terminal
+this project was pretty easy and I found the code online after doing the basic make it red thing. ctrl + to open terminal, and f5 to upload code to the adafruit
 
 
 ## CircuitPython_Servo
