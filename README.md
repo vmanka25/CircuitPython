@@ -23,7 +23,7 @@ while True:
 
 
 ### Evidence
-gif of serial monitor saying hello world
+![helloworld](https://github.com/vmanka25/CircuitPython/blob/master/documentation/HelloWorld.png?raw=true)
 
 ### Reflection
 something aboadding files from the lib folder into the adafruit was challenging
@@ -129,10 +129,14 @@ while True:
 ```
 
 ### Evidence
+![sonarRGB](https://github.com/vmanka25/CircuitPython/blob/master/documentation/SonarRGB.gif?raw=true)
 
 ### Wiring
+![sonar wiring](https://github.com/vmanka25/CircuitPython/blob/master/documentation/SonarRGB_wiring.png?raw=true)
 
 ### Reflection
+At first i tried making the code withot simpleio and just math but it didn't work. someone else wrote working code before me so I used that code instead. in the future I will try and use the easier way. also importing the correct file from the lib is important.
+
 ## CircuitPython_LCD
 
 ### Description & Code
