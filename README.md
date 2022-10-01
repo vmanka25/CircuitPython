@@ -99,7 +99,7 @@ while True:
 
 
 ### Evidence
-![helloworld](https://github.com/vmanka25/CircuitPython/blob/master/documentation/HelloWorld.png?raw=true)
+![helloworld](https://github.com/vmanka25/CircuitPython/blob/master/documentation/gamerRGB.gif?raw=true)
 
 ### Reflection
 this project was pretty easy and I found the code online after doing the basic make it red thing. ctrl + to open terminal, and f5 to upload code to the adafruit
