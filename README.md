@@ -26,8 +26,7 @@ while True:
 ![helloworld](https://github.com/vmanka25/CircuitPython/blob/master/documentation/HelloWorld.png?raw=true)
 
 ### Reflection
-something aboadding files from the lib folder into the adafruit was challenging
-
+this project was pretty easy. ctrl + to open terminal
 
 
 ## CircuitPython_Servo
