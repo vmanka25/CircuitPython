@@ -13,6 +13,7 @@ This repository will actually serve as a aid to help you get started with your o
 ### Description & Code
 I made the neopixel on the adafruit have epic gamer rgb
 
+Code credit goes to [Phillip Burgess](https://learn.adafruit.com/adafruit-neopixel-uberguide/python-circuitpython)
 ```python
 #Vincent
 #9/13/22
