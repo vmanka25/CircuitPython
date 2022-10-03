@@ -217,6 +217,8 @@ At first i tried making the code withot simpleio and just math but it didn't wor
 
 ### Description & Code
 I made an lcd that displayed the clicks of buttons
+
+code credit goes to [kaz](https://github.com/kshinoz98/CircuitPython)
 ```python
 # Vincent
 # 9/16/22
