@@ -259,11 +259,9 @@ while True:                                 #[19-30] Code to add and subtract
 ### Evidence
 ![lcdGIF](https://github.com/vmanka25/CircuitPython/blob/master/documentation/lcd.gif?raw=true)
 ### Wiring
-
+![image](https://github.com/vmanka25/CircuitPython/blob/master/documentation/LcdWiring.png?raw=true)
 ### Reflection
-
-
-
+this project was kind of difficult and I almost broke an adafruit. wiring buttons directly to 5v can short out the board, breaking it and hurting the computer. instead power the button directly from the pins on the adafruit like D2. 
 
 
 ## NextAssignment
