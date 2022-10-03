@@ -257,7 +257,7 @@ while True:                                 #[19-30] Code to add and subtract
 ```
 
 ### Evidence
-
+![lcdGIF](https://github.com/vmanka25/CircuitPython/blob/master/documentation/lcd.gif?raw=true)
 ### Wiring
 
 ### Reflection
