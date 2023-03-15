@@ -307,7 +307,7 @@ while True:
 ### Evidence
 ![temperature](https://user-images.githubusercontent.com/71350243/225117088-87e99e77-41ed-4c23-a3b2-2e8967bb3f23.gif)
 ### Wiring
-![image](https://user-images.githubusercontent.com/71350243/225115707-5b23b647-7098-4e81-9fdc-8ed465991168.png)
+![temperature](https://user-images.githubusercontent.com/71350243/225462163-44105dc8-4b50-4f92-a96a-7d46805f07fb.png)
 ### Reflection
 this project wasn't too hard and graham helped alot. the potentiometer at the back of the lcd backpack controls the brightness and contrast of the lcd. you also have to unplug the lcd when plugging in the micro usb.
 
