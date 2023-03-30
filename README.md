@@ -457,8 +457,7 @@ https://user-images.githubusercontent.com/91289762/226446966-8a585aef-7c21-480a-
 
 ### Wiring
 
-![RotaryEncoder](https://user-images.githubusercontent.com/71350243/228940964-3c43323a-99b1-45e3-a91c-67f63e1d51bd.png)
-
+![image](https://user-images.githubusercontent.com/71350243/228944301-c2f0f406-d630-4415-9ed6-08422b982cd2.png)
 ### Reflection
 
 The code would not upload because vs code was down but kaz got a funtioning video
