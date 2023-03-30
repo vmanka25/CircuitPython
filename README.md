@@ -311,6 +311,198 @@ while True:
 ### Reflection
 this project wasn't too hard and graham helped alot. the potentiometer at the back of the lcd backpack controls the brightness and contrast of the lcd. you also have to unplug the lcd when plugging in the micro usb.
 
+## Rotary encoder
+
+### Description & Code
+
+```python
+#Vincent
+#3/28/23
+#rotary encoder
+
+import time
+
+import rotaryio
+
+import board
+
+from lcd.lcd import LCD
+
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+
+from digitalio import DigitalInOut, Direction, Pull
+
+
+
+encoder = rotaryio.IncrementalEncoder(board.D3, board.D2)
+
+last_position = 0
+
+btn = DigitalInOut(board.D1)
+
+btn.direction = Direction.INPUT
+
+btn.pull = Pull.UP
+
+state = 0
+
+Buttonyep = 1
+
+
+
+i2c = board.I2C()
+
+lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=2, num_cols=16)
+
+
+
+ledGreen = DigitalInOut(board.D8)
+
+ledYellow = DigitalInOut(board.D9)
+
+ledRed = DigitalInOut(board.D10)
+
+ledGreen.direction = Direction.OUTPUT
+
+ledYellow.direction = Direction.OUTPUT
+
+ledRed.direction = Direction.OUTPUT
+
+
+
+while True:
+
+    position = encoder.position
+
+    if position != last_position:
+
+        if position > last_position:
+
+            state = state + 1
+
+        elif position < last_position:
+
+            state = state - 1
+
+        if state > 2:
+
+            state = 2
+
+        if state < 0:
+
+            state = 0
+
+        print(state)
+
+        if state == 0: 
+
+            lcd.set_cursor_pos(0, 0)
+
+            lcd.print("GOOOOO")
+
+        elif state == 1:
+
+            lcd.set_cursor_pos(0, 0)
+
+            lcd.print("yellow")
+
+        elif state == 2:
+
+            lcd.set_cursor_pos(0, 0)
+
+            lcd.print("STOPPP")
+
+    if btn.value == 0 and Buttonyep == 1:
+
+        print("buttion")
+
+        if state == 0: 
+
+                ledGreen.value = True
+
+                ledRed.value = False
+
+                ledYellow.value = False
+
+        elif state == 1:
+
+                ledYellow.value = True
+
+                ledRed.value = False
+
+                ledGreen.value = False
+
+        elif state == 2:
+
+                ledRed.value = True
+
+                ledGreen.value = False
+
+                ledYellow.value = False
+
+        Buttonyep = 0
+
+    if btn.value == 1:
+
+        time.sleep(.1)
+
+        Buttonyep = 1
+
+    last_position = position
+```
+
+### Evidence
+
+https://user-images.githubusercontent.com/91289762/226446966-8a585aef-7c21-480a-8ca3-219ae95f4cef.gif
+
+### Wiring
+
+![RotaryEncoder](https://user-images.githubusercontent.com/71350243/228940964-3c43323a-99b1-45e3-a91c-67f63e1d51bd.png)
+
+### Reflection
+
+The code would not upload because vs code was down but kaz got a funtioning video
+
+## Photointerruptor
+
+### Description & Code
+
+```python
+import time
+import digitalio
+import board
+
+photoI = digitalio.DigitalInOut(board.D7)
+photoI.direction = digitalio.Direction.INPUT
+photoI.pull = digitalio.Pull.UP
+
+last_photoI = True
+last_update = -4
+
+photoICrosses = 0
+
+while True:
+    if time.monotonic()-last_update > 4:
+        print(f"The number of crosses is {photoICrosses}")
+        last_update = time.monotonic()
+    
+    if last_photoI != photoI.value and not photoI.value:
+        photoICrosses += 1
+    last_photoI = photoI.value
+```
+
+### Evidence
+
+![photointerruptor2](https://user-images.githubusercontent.com/71350243/228943496-eb766560-ca4f-453a-87c5-8876c54e69ca.gif)
+
+### Wiring
+
+![image](https://user-images.githubusercontent.com/71350243/228943572-2e0caafd-5b21-4b1a-a3b1-a24fae186c71.png)
+
+### Reflection
+
+Idk what this means
+
 ## NextAssignment
 
 ### Description & Code
@@ -325,3 +517,4 @@ Code goes here
 ### Wiring
 
 ### Reflection
+
