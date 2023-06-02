@@ -503,18 +503,11 @@ while True:
 
 this project was not very hard as I got the code from [River Lewis](https://rivques.dev/high-school-engineering/eng-3-code-notebook/). the wiring was also extremely easy
 
-## NextAssignment
+## Onshape ceritification
 
-### Description & Code
-
-```python
-Code goes here
-
-```
-
-### Evidence
-
-### Wiring
+![Screenshot 2023-06-01 214312](https://github.com/vmanka25/CircuitPython/assets/71350243/32c4bee3-81d4-41b5-a45a-d745cec1cf9d)
+![Screenshot 2023-06-01 214557](https://github.com/vmanka25/CircuitPython/assets/71350243/3c3e9cb4-62b9-4d53-8f91-5582346e5b08)
 
 ### Reflection
 
+Passing the onshape exam wasn't too hard and I felt like the practice we did in class helped a lot. The questions on the exam were very similar to the practice we did In class and were a great way to prepare. As long as you pay attention to all the sketches, have a bit of general onshape knowledge and do the practice the exam isn't too hard.
