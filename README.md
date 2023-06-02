@@ -271,7 +271,7 @@ this project was kind of difficult and I almost broke an adafruit. wiring button
 
 
 ### Description & Code
-
+I made an LCD display the temperature read by a temperature sensor
 ```python
 import board
 import time
