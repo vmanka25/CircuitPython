@@ -460,7 +460,7 @@ https://user-images.githubusercontent.com/91289762/226446966-8a585aef-7c21-480a-
 ![image](https://user-images.githubusercontent.com/71350243/228944301-c2f0f406-d630-4415-9ed6-08422b982cd2.png)
 ### Reflection
 
-The code would not upload because vs code was down but kaz got a funtioning video
+This project was pretty complicated but I got the code from [Kaz](https://github.com/kshinoz98/CircuitPython) which made it easier. the wiring wasn't too hard but I did learn that you should plug in the lcd after you plug in the arduino if the lcd doesn't work normaly. VScode was down for when I tried to upload the code so I used kaz's video.
 
 ## Photointerruptor
 
