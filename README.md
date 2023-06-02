@@ -501,7 +501,7 @@ while True:
 
 ### Reflection
 
-Idk what this means
+this project was not very hard as I got the code from [River Lewis](https://rivques.dev/high-school-engineering/eng-3-code-notebook/). the wiring was also extremely easy
 
 ## NextAssignment
 
