@@ -314,7 +314,7 @@ this project wasn't too hard and graham helped alot. the potentiometer at the ba
 ## Rotary encoder
 
 ### Description & Code
-
+I used a rotary encoder an LCD and LEDs to create a menu controlled stoplight.
 ```python
 #Vincent
 #3/28/23
@@ -466,6 +466,7 @@ The code would not upload because vs code was down but kaz got a funtioning vide
 
 ### Description & Code
 
+I used a photointeruptor and used code to count the number of passes the photointeruptor detects
 ```python
 import time
 import digitalio
